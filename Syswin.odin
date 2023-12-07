@@ -1,11 +1,11 @@
-package main
+ package main
 
-import core:fmt
-import vendor:glfw
+import "core:fmt"
+import "vendor:glfw"
 import vk "vendor:vulkan"
 
 // making a vulkan window
-proc::main(){
+main::proc(){
     if !bool(glfw.Init()){
         fmt.eprintln("GLFW Load error")
         return 
@@ -21,5 +21,6 @@ proc::main(){
         fmt.eprintln("GLFW has failed at making a Window")
         return
     }
+    glfw.MakeContextCurrent(winmaker)
     
 }
