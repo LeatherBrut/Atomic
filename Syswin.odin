@@ -3,6 +3,7 @@
 import "core:fmt"
 import "vendor:glfw"
 import vk "vendor:vulkan"
+import ui "vendor:microui"
 
 // making a vulkan window
 main::proc(){
@@ -12,7 +13,7 @@ main::proc(){
     }
 
 
-    winmaker :=glfw.CreateWindow(300,300,"Atomic text editor",nil,nil)
+    winmaker :=glfw.CreateWindow(450,800,"Atomic text editor",nil,nil)
 
     defer glfw.Terminate()
     defer glfw.DestroyWindow(winmaker)
@@ -23,4 +24,6 @@ main::proc(){
     }
     glfw.MakeContextCurrent(winmaker)
     
+    
+    for !glfw.WindowShouldClose(winmaker){} 
 }
