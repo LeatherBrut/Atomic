@@ -13,7 +13,7 @@ main::proc(){
     }
 
 
-    winmaker :=glfw.CreateWindow(800,460,"Atomic text editor",nil,nil)
+    winmaker :=glfw.CreateWindow(800,450,"Atomic text editor",nil,nil)
 
     defer glfw.Terminate()
     defer glfw.DestroyWindow(winmaker)
