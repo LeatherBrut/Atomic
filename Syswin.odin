@@ -25,5 +25,10 @@ main::proc(){
     glfw.MakeContextCurrent(winmaker)
     
     
-    for !glfw.WindowShouldClose(winmaker){} 
+    for !glfw.WindowShouldClose(winmaker){
+        
+        glfw.PollEvents()
+
+        glfw.SwapBuffers(winmaker)
+    } 
 }
