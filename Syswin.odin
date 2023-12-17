@@ -1,4 +1,4 @@
- package main
+package main
 
 import "core:fmt"
 import "vendor:glfw"
@@ -13,7 +13,7 @@ main::proc(){
     }
 
 
-    winmaker :=glfw.CreateWindow(450,800,"Atomic text editor",nil,nil)
+    winmaker :=glfw.CreateWindow(800,450,"Atomic text editor",nil,nil)
 
     defer glfw.Terminate()
     defer glfw.DestroyWindow(winmaker)
