@@ -5,7 +5,10 @@ import "vendor:glfw"
 import vk "vendor:vulkan"
 import ui "vendor:microui"
 
-// making a vulkan window
+vkmaj ::1
+vkmin ::2
+
+// making a window
 main::proc(){
     if !bool(glfw.Init()){
         fmt.eprintln("GLFW Load error")
@@ -24,7 +27,8 @@ main::proc(){
     }
     glfw.MakeContextCurrent(winmaker)
     
-    
+    // load vulkan !!!!
+    //vk.MAKE_VERSION(vkmaj, vkmin,vk.load_proc_addresses)
     for !glfw.WindowShouldClose(winmaker){
         
         glfw.PollEvents()
