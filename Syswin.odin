@@ -3,7 +3,7 @@ package main
 import "core:fmt"
 import "vendor:glfw"
 import vk "vendor:vulkan"
-import ui "vendor:microui"
+
 
 vkmaj ::1
 vkmin ::2
@@ -35,4 +35,6 @@ main::proc(){
 
         glfw.SwapBuffers(winmaker)
     } 
+
 }
+
